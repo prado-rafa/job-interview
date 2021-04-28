@@ -2,12 +2,10 @@ def parseInt(hex):
     value = 0
     for i, v in enumerate(hex):
         o = ord(v)
-        if (o >= 65 and o < 75):
-            toAdd = o - 55
-            value = value * 16 + toAdd
+        if (o >= 65 and o < 71):
+            value = value * 16 + o - 55
         elif (o >= 48 and o < 58):
-            toAdd = o - 48
-            value = value * 16 + toAdd
+            value = value * 16 + o - 48
         else:
             return "Invalid Input"
     
